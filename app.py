@@ -18,7 +18,7 @@ def move_button():
 window = tk.Tk()
 window.geometry('800x600')  # Set the size of the window to 800x600 pixels
 
-button = tk.Button(window, text="Grab me!", width=10, height=2)
+button = tk.Button(window, text="Catch me!", width=10, height=2)
 button.place(x=window.winfo_width()//2, y=window.winfo_height()//2)
 
 window.bind('<Motion>', check_distance)
