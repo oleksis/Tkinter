@@ -32,4 +32,10 @@ button.place(x=window.winfo_width() // 2, y=window.winfo_height() // 2)
 
 window.bind("<Motion>", check_distance)
 
-window.mainloop()
+
+def main():
+    window.mainloop()
+
+
+if __name__ == "__main__":
+    main()
