@@ -24,13 +24,21 @@ def move_button():
     )
 
 
+def move_cursor(event):
+    check_distance(event)
+    cursor.place(x=event.x, y=event.y)
+
+
 window = tk.Tk()
 window.geometry("800x600")  # Set the size of the window to 800x600 pixels
+window.config(cursor="none")
 
-button = tk.Button(window, text="Catch me!", width=10, height=2)
+cursor = tk.Label(window, text="🐍", font=("Arial", 14))
+
+button = tk.Button(window, text="🐰", width=10, height=2)
 button.place(x=window.winfo_width() // 2, y=window.winfo_height() // 2)
 
-window.bind("<Motion>", check_distance)
+window.bind("<Motion>", move_cursor)  # Bind the move_cursor function to mouse motion
 
 
 def main():
