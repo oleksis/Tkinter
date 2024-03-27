@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry]
 package-mode = true
 name = "catch-me"
-version = "0.2.0"
+version = "0.3.0"
 description = "🐍 Catch me if you can!🐰"
 authors = ["Oleksis Fraga <oleksis.fraga@gmail.com>"]
 license = "MIT"
