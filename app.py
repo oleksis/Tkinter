@@ -1,4 +1,5 @@
 import tkinter as tk
+import tkinter.messagebox as mb
 import random
 import math
 
@@ -29,13 +30,19 @@ def move_cursor(event):
     cursor.place(x=event.x, y=event.y)
 
 
+def button_click():
+    result = mb.askokcancel("You caught me, You Won!", "Want to exit?")
+    if result:
+        window.destroy()
+
+
 window = tk.Tk()
 window.geometry("800x600")  # Set the size of the window to 800x600 pixels
 window.config(cursor="none")
 
 cursor = tk.Label(window, text="🐍", font=("Arial", 14))
 
-button = tk.Button(window, text="🐰", width=10, height=2)
+button = tk.Button(window, text="🐰", width=10, height=2, command=button_click)
 button.place(x=window.winfo_width() // 2, y=window.winfo_height() // 2)
 
 window.bind("<Motion>", move_cursor)  # Bind the move_cursor function to mouse motion
